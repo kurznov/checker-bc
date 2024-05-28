@@ -13,12 +13,12 @@ sender_api_id = '15013021'
 sender_api_hash = '26632e037cb200bfd3ce16bb004da96f'
 
 channel = '@memeklasyalala'
-report_group = [-2110070257]
+report_group = '@kontolalapet'
 
-sleep_time = 2  # Seconds
+sleep_time = 1 * 60  # Seconds
 
-rand_sleep_min = 2 # Seconds
-rand_sleep_max = 2 # Seconds
+rand_sleep_min = 2 * 60 # Seconds
+rand_sleep_max = 2 * 60 # Seconds
 
 checker_client = TelegramClient('bot', checker_api_id, checker_api_hash)
 sender_client= TelegramClient('sender_bot', sender_api_id, sender_api_hash)
