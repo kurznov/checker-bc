@@ -47,6 +47,16 @@ async def send_random_ping():
         await sender_client.send_message(channel, "SEND LIST READY")
 
 async def main():
+    await checker_client.connect()
+    if not await checker_client.is_user_authorized():
+        await checker_client.send_code_request(phone)
+        code = input('Enter the code: ')
+        await checker_client.sign_in(phone, code)
+    await sender_client.connect()
+    if not await sender_client.is_user_authorized():
+        await sender_client.send_code_request(phone)
+        code = input('Enter the code: ')
+        await sender_client.sign_in(phone, code)
     await checker_client.start()
     await sender_client.start()
     checker_client.loop.create_task(check_for_replies())
