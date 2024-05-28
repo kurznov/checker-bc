@@ -6,19 +6,19 @@ from random import choice
 import random
 
 
-checker_api_id = '23630005'
-checker_api_hash = 'cd24b2a07a9dfa52e4adcd99f41c8d4a'
+checker_api_id = '10373597'
+checker_api_hash = '1bb0bbe04bcce67e83c947258f3ce3b5'
 
-sender_api_id = '16738665'
-sender_api_hash = 'a58405e7f07ab8f3ca0a5d3aef7c6323'
+sender_api_id = '15013021'
+sender_api_hash = '26632e037cb200bfd3ce16bb004da96f'
 
-channel = '@chtest88088'
-report_group = '@test88088'
+channel = '-2014458907'
+report_group = '-2110070257'
 
-sleep_time = 2 * 60  # Seconds
+sleep_time = 5 * 60  # Seconds
 
-rand_sleep_min = 4 * 60 # Seconds
-rand_sleep_max = 8 * 60 # Seconds
+rand_sleep_min = 3 * 60 # Seconds
+rand_sleep_max = 5 * 60 # Seconds
 
 checker_client = TelegramClient('bot', checker_api_id, checker_api_hash)
 sender_client= TelegramClient('sender_bot', sender_api_id, sender_api_hash)
@@ -38,11 +38,11 @@ async def check_for_replies():
                 del posted_messages[msg_id]
                 # Forward the message to the report group with a note
                 await checker_client.forward_messages(report_group, message.id, channel)
-                await checker_client.send_message(report_group, f"No Replies detected for the message above after {sleep_time} seconds.")
+                await checker_client.send_message(report_group, f"afk main-main (start {sleep_time} seconds)")
 async def send_random_ping():
     while True:
         await asyncio.sleep(random.randint(rand_sleep_min, rand_sleep_max))
-        await sender_client.send_message(channel, "PING")
+        await sender_client.send_message(channel, "SEND LIST READY")
 
 async def main():
     await checker_client.start()
