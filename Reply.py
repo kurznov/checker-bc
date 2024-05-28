@@ -8,9 +8,11 @@ import random
 
 checker_api_id = '10373597'
 checker_api_hash = '1bb0bbe04bcce67e83c947258f3ce3b5'
+bot = '+6283845989823'
 
 sender_api_id = '15013021'
 sender_api_hash = '26632e037cb200bfd3ce16bb004da96f'
+sender_bot = '+6283104604190'
 
 channel = '@memeklasyalala'
 report_group = '@kontolalapet'
