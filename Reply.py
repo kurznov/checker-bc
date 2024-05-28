@@ -12,13 +12,13 @@ checker_api_hash = '1bb0bbe04bcce67e83c947258f3ce3b5'
 sender_api_id = '15013021'
 sender_api_hash = '26632e037cb200bfd3ce16bb004da96f'
 
-channel = '-2014458907'
-report_group = '-2110070257'
+channel = [-2014458907]
+report_group = [-2110070257]
 
-sleep_time = 5 * 60  # Seconds
+sleep_time = 1 * 60  # Seconds
 
-rand_sleep_min = 3 * 60 # Seconds
-rand_sleep_max = 5 * 60 # Seconds
+rand_sleep_min = 1 * 60 # Seconds
+rand_sleep_max = 1 * 60 # Seconds
 
 checker_client = TelegramClient('bot', checker_api_id, checker_api_hash)
 sender_client= TelegramClient('sender_bot', sender_api_id, sender_api_hash)
